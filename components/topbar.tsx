@@ -1,6 +1,7 @@
 'use client'
 
-import { Search, Bell, Menu, Plus } from 'lucide-react'
+import Link from 'next/link'
+import { Search, Bell, Menu, Plus, LogOut } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
 export function Topbar({
@@ -64,6 +65,14 @@ export function Topbar({
           <span className="block text-[0.7rem] text-muted-foreground">Warehouse Lead</span>
         </span>
       </button>
+
+      <Link
+        href="/login"
+        className="rounded-lg p-2 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+        aria-label="Sign out"
+      >
+        <LogOut className="size-5" />
+      </Link>
     </header>
   )
 }
